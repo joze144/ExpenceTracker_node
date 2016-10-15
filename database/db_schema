@@ -1,0 +1,23 @@
+CREATE TABLE company (
+    id INTEGER CONSTRAINT id_pk PRIMARY KEY,
+    name VARCHAR(200),
+    project_id INTEGER,
+    account_id VARCHAR(100) NOT NULL
+)
+
+CREATE TABLE investor (
+    id INTEGER CONSTRAINT investor_id_pk PRIMARY KEY,
+    name VARCHAR(200),
+    account_id VARCHAR(100) NOT NULL
+)
+
+CREATE TABLE company_idea (
+    id INTEGER CONSTRAINT id_pk PRIMARY KEY,
+    company_id INTEGER NOT NULL,
+    project_id INTEGER NOT NULL
+)
+
+CREATE TABLE project (
+    id INTEGER CONSTRAINT id_pk PRIMARY KEY,
+    name VARCHAR(200)
+)
